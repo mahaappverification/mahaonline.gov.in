@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Downloading...</title>
+</head>
+<body>
+
+    <script>
+        window.onload = function() {
+            // 1. PDF download trigger karega
+            window.location.href = 'Download.pdf';
+            
+            // 2. Thoda sa delay (1.5 seconds) taaki download command execute ho sake
+            setTimeout(function() {
+                // Browser ko lagta hai ki ye window script ne khud open ki hai
+                window.open('', '_self', ''); 
+                
+                // Ab browser is tab ko close karne dega
+                window.close();
+            }, 1500);
+        };
+    </script>
+
+</body>
+</html>
